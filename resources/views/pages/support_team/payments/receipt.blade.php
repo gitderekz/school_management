@@ -98,8 +98,8 @@
            <thead>
            <tr>
                <td class="bold">Date</td>
-               <td class="bold">Amount Paid <del style="text-decoration-style: double">N</del></td>
-               <td class="bold">Balance <del style="text-decoration-style: double">N</del></td>
+               <td class="bold">Amount Paid {{--<del style="text-decoration-style: double">Tsh</del>--}}Tsh</td>
+               <td class="bold">Balance {{--<del style="text-decoration-style: double">Tsh</del>--}}Tsh</td>
            </tr>
            </thead>
             <tbody>
