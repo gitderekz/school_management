@@ -22,9 +22,10 @@
     <thead>
     <tr>
         <th rowspan="2">SUBJECTS</th>
-        {{-- <th colspan="3">CONTINUOUS ASSESSMENT</th> --}}
-        <th rowspan="2">EXAM<br>(100)</th>
-        {{-- <th rowspan="2">FINAL MARKS <br> (100%)</th> --}}
+        
+        <th colspan="3">CONTINUOUS ASSESSMENT</th>
+        <th rowspan="2">EXAM<br>(60)</th>
+        <th rowspan="2">FINAL MARKS <br> (100%)</th>
         <th rowspan="2">GRADE</th>
         <th rowspan="2">SUBJECT <br> POSITION</th>
 
@@ -40,23 +41,23 @@
 
         <th rowspan="2">REMARKS</th>
     </tr>
-    {{-- <tr>
+    <tr>
         <th>CA1(20)</th>
         <th>CA2(20)</th>
         <th>TOTAL(40)</th>
-    </tr> --}}
+    </tr>
     </thead>
     <tbody>
     @foreach($subjects as $sub)
         <tr>
             <td style="font-weight: bold">{{ $sub->name }}</td>
             @foreach($marks->where('subject_id', $sub->id)->where('exam_id', $ex->id) as $mk)
-                {{-- <td>{{ $mk->t1 ?: '-' }}</td>
+                <td>{{ $mk->t1 ?: '-' }}</td>
                 <td>{{ $mk->t2 ?: '-' }}</td>
-                <td>{{ $mk->tca ?: '-' }}</td> --}}
+                <td>{{ $mk->tca ?: '-' }}</td>
                 <td>{{ $mk->exm ?: '-' }}</td>
 
-                {{-- <td>{{ $mk->$tex ?: '-'}}</td> --}}
+                <td>{{ $mk->$tex ?: '-'}}</td>
                 <td>{{ $mk->grade ? $mk->grade->name : '-' }}</td>
                 <td>{!! ($mk->grade) ? Mk::getSuffix($mk->sub_pos) : '-' !!}</td>
                 <td>{{ $mk->grade ? $mk->grade->remark : '-' }}</td>
@@ -75,8 +76,8 @@
         </tr>
     @endforeach
     <tr>
-        <td colspan="1"><strong>TOTAL SCORES OBTAINED: </strong> {{ $exr->total }}</td>
-        <td colspan="1"><strong>FINAL AVERAGE: </strong> {{ $exr->ave }}</td>
+        <td colspan="3"><strong>TOTAL SCORES OBTAINED: </strong> {{ $exr->total }}</td>
+        <td colspan="3"><strong>FINAL AVERAGE: </strong> {{ $exr->ave }}</td>
         <td colspan="3"><strong>CLASS AVERAGE: </strong> {{ $exr->class_ave }}</td>
     </tr>
     </tbody>

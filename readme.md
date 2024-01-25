@@ -121,3 +121,12 @@ If you discover a security vulnerability within LAV_SMS, please send an e-mail t
 
 ### **Contact [derek julius]**
 - Phone : +255621512848
+
+***more customization on***
+resources\views\pages\support_team\marks\edit.blade.php
+
+resources\views\pages\support_team\marks\show\sheet.blade.php
+resources\views\pages\support_team\marks\show\sheet.backup.blade.php
+
+resources\views\pages\support_team\marks\print\sheet.blade.php
+resources\views\pages\support_team\marks\print\sheet.backup.blade.php
